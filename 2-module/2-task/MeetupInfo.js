@@ -10,7 +10,7 @@ export const MeetupInfo = {
             </li>
             <li>
               <img class="icon info-list__icon" alt="icon" src="/assets/icons/icon-cal-lg.svg"/>
-              <time :datetime="meetup.localeDate">{{ meetup.localeDate }}</time>
+              <time :datetime="meetupLocaleDate">{{ meetupLocaleDate }}</time>
             </li>
           </ul>`,
 
@@ -18,6 +18,16 @@ export const MeetupInfo = {
     meetup: {
       type: Object,
       required: true,
+    },
+  },
+
+  computed: {
+    meetupLocaleDate() {
+      return new Date(this.meetup.date).toLocaleString(navigator.language, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+      });
     },
   },
 };
