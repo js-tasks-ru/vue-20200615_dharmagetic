@@ -1,5 +1,4 @@
 import { MeetupAgendaItem } from './MeetupAgendaItem.js';
-// import { agendaItemIcons, agendaItemTitles } from './data.js';
 
 export const MeetupAgenda = {
   name: 'MeetupAgenda',
@@ -24,15 +23,4 @@ export const MeetupAgenda = {
       required: false,
     },
   },
-
-  // computed: {
-  //   preparedAgenda() {
-  //     return this.agenda.map((agenda) => ({
-  //       ...agenda,
-  //       icon: `/assets/icons/icon-${agendaItemIcons[agenda.type]}.svg`,
-  //       title: agenda.title ? agenda.title : agendaItemTitles[agenda.type],
-  //       is_talk: agenda.type === 'talk',
-  //     }));
-  //   },
-  // },
 };
